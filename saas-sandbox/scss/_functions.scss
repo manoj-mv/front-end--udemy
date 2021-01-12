@@ -1,0 +1,16 @@
+// set text color
+
+@function set-text-color($color){
+  @if(lightness($color) > 50 ){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
+
+// transform mixin
+@mixin transform($propety){
+  --webkit-transform : $propety;
+  -ms-transform: $property;
+  transform: $property;
+}
