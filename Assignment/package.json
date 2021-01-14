@@ -1,0 +1,14 @@
+{
+  "name": "assignment-1",
+  "version": "1.0.0",
+  "description": "portfolio-template",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
