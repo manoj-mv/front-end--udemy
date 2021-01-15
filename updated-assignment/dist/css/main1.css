@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none; }
+
+.container {
+  max-width: 80vw;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden; }
+
+.lead {
+  color: #777978;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem; }
+
+.secondary-text {
+  color: #777978;
+  font-size: 1rem;
+  line-height: 1.2; }
+
+.text-center {
+  text-align: center; }
+
+.py-1 {
+  padding: 1rem 0rem; }
+
+.py-2 {
+  padding: 2rem 0rem; }
+
+.py-3 {
+  padding: 3rem 0rem; }
+
+.py-4 {
+  padding: 4rem 0rem; }
+
+.my-1 {
+  margin: 1rem 0rem; }
+
+.my-2 {
+  margin: 2rem 0rem; }
+
+.my-3 {
+  margin: 3rem 0rem; }
+
+.my-4 {
+  margin: 4rem 0rem; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100; }
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer; }
+
+.btn-primary {
+  background-color: #10c9c3;
+  transition: opacity 0.7s ease-in-out; }
+
+.btn-primary:hover {
+  opacity: 0.7; }
+
+.capitalize {
+  text-transform: capitalize; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.container-center {
+  max-width: 50vw;
+  margin: auto; }
+
+General Styling body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background: #fff; }
+
+a {
+  text-decoration: none;
+  color: #191919; }
+
+ul {
+  list-style: none; }
+
+img {
+  width: 100%; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2rem; }
+  #main-nav .header-logo {
+    width: 60px; }
+  #main-nav .nav-links {
+    display: flex; }
+    #main-nav .nav-links li {
+      padding: 1rem 1.5rem; }
+      #main-nav .nav-links li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        border-bottom: 3px solid transparent;
+        transition: border-color 0.7s; }
+        #main-nav .nav-links li a:hover {
+          border-color: #10c9c3; }
+        #main-nav .nav-links li a.current {
+          border-color: #10c9c3; }
+
+.header-container {
+  height: 100vh; }
+
+#header-home {
+  background: url("../img/header.jpg") no-repeat center center/cover; }
+  #header-home .outer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr); }
+    #header-home .outer .header-content {
+      padding: 1rem;
+      grid-column: 5 / span 3;
+      grid-row: 3 / span 4;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0; }
+      #header-home .outer .header-content a {
+        color: #fff; }
+      #header-home .outer .header-content h1,
+      #header-home .outer .header-content p,
+      #header-home .outer .header-content a {
+        padding: 0.5rem; }
+
+#about {
+  padding: 5rem 2rem; }
+  #about .about-a {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #about .about-a #sign {
+      width: 110px; }
+
+#about-remain {
+  background: url("../img/about-bg2.jpg") no-repeat center center/cover; }
+  #about-remain .about-b {
+    display: flex;
+    padding: 13rem 0; }
+    #about-remain .about-b .about-skills {
+      padding: 5rem rem;
+      flex-grow: 1; }
+      #about-remain .about-b .about-skills h2 {
+        padding: 0.8rem;
+        text-transform: capitalize !important; }
+      #about-remain .about-b .about-skills .skill {
+        padding: 0.6rem; }
+      #about-remain .about-b .about-skills .progress {
+        margin: 0.8rem 0;
+        overflow: hidden;
+        height: 5px;
+        background: #d8d8d8;
+        position: relative; }
+        #about-remain .about-b .about-skills .progress div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 6px;
+          background: #10c9c3; }
+    #about-remain .about-b .dummy {
+      flex-grow: 2; }
+
+#work {
+  background-color: #10c9c3;
+  color: #fff; }
+  #work .work-a {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #work .work-a .box {
+      display: flex; }
+      #work .work-a .box .icon {
+        padding: 1rem 0; }
+        #work .work-a .box .icon i {
+          font-size: 50px; }
+      #work .work-a .box .data {
+        padding: 1rem; }
+        #work .work-a .box .data h4 {
+          padding: 0.3rem; }
+  #work-portfolio .work-b .portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0; }
+    #work-portfolio .work-b .portfolio .item {
+      position: relative;
+      width: 100%;
+      height: 100%; }
+      #work-portfolio .work-b .portfolio .item .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: #000; }
+        #work-portfolio .work-b .portfolio .item .overlay i {
+          color: #fff;
+          position: absolute;
+          top: 45%;
+          left: 45%;
+          font-size: 50px; }
+      #work-portfolio .work-b .portfolio .item:hover .overlay {
+        opacity: 0.8; }
+  #work-portfolio .load-more {
+    padding: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f5f5f5; }
+
+#process .process-a h2 {
+  padding: 2rem 0; }
+
+#process .process-img-contain {
+  position: relative; }
+  #process .process-img-contain .process-img {
+    display: block;
+    max-width: 100%;
+    max-height: 750px; }
+  #process .process-img-contain .play-icon {
+    font-size: 50px;
+    background: #10c9c3;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2rem;
+    position: absolute;
+    top: 45%;
+    left: 50%; }
+
+#services {
+  background-color: #f5f5f5;
+  padding: 5rem 0; }
+  #services .service-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center; }
+    #services .service-box .service {
+      padding: 2rem; }
+      #services .service-box .service i {
+        font-size: 3rem; }
+      #services .service-box .service i,
+      #services .service-box .service p {
+        color: #777978;
+        padding-bottom: 1rem; }
+      #services .service-box .service h4 {
+        text-transform: uppercase;
+        padding-bottom: 0.6rem; }
+
+#testimonials {
+  background-color: #10c9c3;
+  color: #fff; }
+  #testimonials .testi-content {
+    padding: 7rem 0; }
+    #testimonials .testi-content p {
+      font-size: 1.45rem;
+      line-height: 1.6; }
+    #testimonials .testi-content h4 {
+      padding: 2rem; }
+  #testimonials-b .clients {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 2rem; }
+    #testimonials-b .clients .client-logo {
+      width: 200px; }
+
+#contact {
+  background: #f5f5f5; }
+  #contact h2 {
+    padding: 2rem 0; }
+  #contact .content {
+    padding: 0 8rem;
+    max-height: 800px h2, p;
+      max-height-padding: 1rem 0; }
+  #contact .text-fields {
+    padding: 1rem 0;
+    display: grid;
+    grid-template-areas: "name email" "title title" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment" "comment comment";
+    gap: 1.2rem; }
+    #contact .text-fields .name-input {
+      grid-area: name; }
+    #contact .text-fields .email-input {
+      grid-area: email; }
+    #contact .text-fields .title-input {
+      grid-area: title; }
+    #contact .text-fields .comment-input {
+      grid-area: comment;
+      color: inherit;
+      font-family: inherit;
+      font-size: 13px; }
+    #contact .text-fields .text-input {
+      padding: 1rem 1rem;
+      border: 1px solid transparent;
+      transition: border 0.7s; }
+      #contact .text-fields .text-input:focus {
+        border: 1px solid #10c9c3; }
+  #contact button {
+    margin: 2rem 0;
+    color: #fff;
+    border-radius: 5px; }
+
+#footer {
+  background: #141414;
+  color: #fff;
+  padding: 5rem; }
+  #footer .footer-contents {
+    display: flex;
+    justify-content: space-between; }
+    #footer .footer-contents .links {
+      font: inherit;
+      display: flex;
+      justify-content: space-between; }
+      #footer .footer-contents .links .link-a {
+        padding-right: 2rem; }
+  #footer .content-box {
+    padding: 4rem; }
