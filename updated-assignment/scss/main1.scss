@@ -168,8 +168,8 @@
         gap: 0;
         .item {
           position: relative;
-          width: 100%;
-          height: 100%;
+          // width: 100%;
+          // height: 100%;
           .overlay {
             position: absolute;
             top: 0;
@@ -179,7 +179,8 @@
             height: 100%;
             width: 100%;
             opacity: 0;
-            transition: 0.5s ease;
+            // display: none;
+            transition: all 0.5s ease;
             background-color: #000;
 
             i {
@@ -193,6 +194,11 @@
 
           &:hover .overlay {
             opacity: 0.8;
+            // display: block;
+          }
+          .image {
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -303,7 +309,9 @@
   }
   .content {
     padding: 0 8rem;
-    max-height: 800px h2, p {
+    // max-height: 800px;
+    h2,
+    p {
       padding: 1rem 0;
     }
   }
@@ -382,3 +390,56 @@
     padding: 4rem;
   }
 }
+
+//register page
+#header-register {
+  border-bottom: 4px solid $primary-color;
+}
+
+.reg-b {
+  .text-fields {
+    display: grid;
+    gap: 1.9rem;
+    grid-template-areas:
+      "fname lname"
+      "age dob"
+      "email gender"
+      "state hobbies";
+  }
+
+  .fname-input {
+    grid-area: fname;
+  }
+  .lname-input {
+    grid-area: lname;
+  }
+  .num-input {
+    grid-area: age;
+  }
+  .email-input {
+    grid-area: email;
+  }
+
+  .dob {
+    grid-area: dob;
+  }
+  .radios {
+    grid-area: gender;
+  }
+  .state {
+    grid-area: state;
+  }
+  .hobies {
+    grid-area: hobies;
+  }
+  .file {
+    grid-area: file;
+  }
+
+  .hobbies {
+    display: flex;
+  }
+}
+
+// mobile
+@import "mobile";
