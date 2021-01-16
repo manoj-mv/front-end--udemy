@@ -378,8 +378,12 @@
     display: flex;
     justify-content: space-between;
     .links {
-      font: inherit;
+      // font: inherit;
       display: flex;
+      a {
+        color: #fff;
+      }
+
       justify-content: space-between;
       .link-a {
         padding-right: 2rem;
@@ -387,7 +391,11 @@
     }
   }
   .content-box {
-    padding: 4rem;
+    padding: 3rem;
+    & > * {
+      padding: 0.2rem 0;
+    }
+    // font: inherit;
   }
 }
 

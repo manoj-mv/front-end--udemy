@@ -335,13 +335,16 @@ img {
     display: flex;
     justify-content: space-between; }
     #footer .footer-contents .links {
-      font: inherit;
       display: flex;
       justify-content: space-between; }
+      #footer .footer-contents .links a {
+        color: #fff; }
       #footer .footer-contents .links .link-a {
         padding-right: 2rem; }
   #footer .content-box {
-    padding: 4rem; }
+    padding: 3rem; }
+    #footer .content-box > * {
+      padding: 0.2rem 0; }
 
 #header-register {
   border-bottom: 4px solid #10c9c3; }
