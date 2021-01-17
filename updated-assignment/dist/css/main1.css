@@ -350,6 +350,23 @@ img {
   border-bottom: 4px solid #10c9c3;
   background: url("../img/header.jpg") no-repeat center center/cover; }
 
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
 #reg-form {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
   #reg-form .reg-a {
@@ -360,16 +377,19 @@ img {
     #reg-form .reg-b input,
     #reg-form .reg-b textarea,
     #reg-form .reg-b select {
+      border-radius: 15px;
       transition: border 0.5s ease-in;
-      outline: 1px solid transparent; }
+      outline: 1px solid #cac8c8; }
     #reg-form .reg-b input:focus,
     #reg-form .reg-b textarea:focus,
     #reg-form .reg-b select:focus {
       outline: 1px solid #10c9c3;
-      border: none; }
+      border: none;
+      padding: 0.6rem; }
     #reg-form .reg-b .form-contain {
       display: grid;
       gap: 2rem;
+      padding: 0 2rem;
       justify-content: center; }
       #reg-form .reg-b .form-contain .form-input {
         padding: 0.6rem; }
@@ -378,16 +398,20 @@ img {
       #reg-form .reg-b .hobbies .hob-check {
         padding: 0 3rem;
         align-items: flex-start; }
+    #reg-form .reg-b input[type="radio"],
+    #reg-form .reg-b input[type="checkbox"],
+    #reg-form .reg-b input[type="file"] {
+      outline: none; }
     #reg-form .reg-b .btn-form {
       color: #fff; }
     #reg-form .reg-b .email-input {
       width: 100%; }
     #reg-form .reg-b .num-input {
-      width: 82%; }
+      width: 83%; }
     #reg-form .reg-b .date-input {
-      width: 61%; }
+      width: 64%; }
     #reg-form .reg-b .select-input {
-      width: 57%; }
+      width: 60%; }
 
 @media (max-width: 540px) {
   #main-nav {
