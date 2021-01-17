@@ -347,42 +347,47 @@ img {
       padding: 0.2rem 0; }
 
 #header-register {
-  border-bottom: 4px solid #10c9c3; }
+  border-bottom: 4px solid #10c9c3;
+  background: url("../img/header.jpg") no-repeat center center/cover; }
 
-.reg-b .text-fields {
-  display: grid;
-  gap: 1.9rem;
-  grid-template-areas: "fname lname" "age dob" "email gender" "state hobbies"; }
-
-.reg-b .fname-input {
-  grid-area: fname; }
-
-.reg-b .lname-input {
-  grid-area: lname; }
-
-.reg-b .num-input {
-  grid-area: age; }
-
-.reg-b .email-input {
-  grid-area: email; }
-
-.reg-b .dob {
-  grid-area: dob; }
-
-.reg-b .radios {
-  grid-area: gender; }
-
-.reg-b .state {
-  grid-area: state; }
-
-.reg-b .hobies {
-  grid-area: hobies; }
-
-.reg-b .file {
-  grid-area: file; }
-
-.reg-b .hobbies {
-  display: flex; }
+#reg-form {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+  #reg-form .reg-a {
+    padding: 2rem; }
+  #reg-form .reg-b {
+    font-size: 1.1rem;
+    align-items: center; }
+    #reg-form .reg-b input,
+    #reg-form .reg-b textarea,
+    #reg-form .reg-b select {
+      transition: border 0.5s ease-in;
+      outline: 1px solid transparent; }
+    #reg-form .reg-b input:focus,
+    #reg-form .reg-b textarea:focus,
+    #reg-form .reg-b select:focus {
+      outline: 1px solid #10c9c3;
+      border: none; }
+    #reg-form .reg-b .form-contain {
+      display: grid;
+      gap: 2rem;
+      justify-content: center; }
+      #reg-form .reg-b .form-contain .form-input {
+        padding: 0.6rem; }
+    #reg-form .reg-b .hobbies {
+      display: flex; }
+      #reg-form .reg-b .hobbies .hob-check {
+        padding: 0 3rem;
+        align-items: flex-start; }
+    #reg-form .reg-b .btn-form {
+      color: #fff; }
+    #reg-form .reg-b .email-input {
+      width: 100%; }
+    #reg-form .reg-b .num-input {
+      width: 82%; }
+    #reg-form .reg-b .date-input {
+      width: 61%; }
+    #reg-form .reg-b .select-input {
+      width: 57%; }
 
 @media (max-width: 540px) {
   #main-nav {

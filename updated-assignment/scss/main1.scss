@@ -402,50 +402,109 @@
 //register page
 #header-register {
   border-bottom: 4px solid $primary-color;
+  background: $bg-image no-repeat center center / cover;
 }
 
-.reg-b {
-  .text-fields {
-    display: grid;
-    gap: 1.9rem;
-    grid-template-areas:
-      "fname lname"
-      "age dob"
-      "email gender"
-      "state hobbies";
-  }
+// .reg-b {
+//   .text-fields {
+//     display: grid;
+//     gap: 1.9rem;
+//     grid-template-areas:
+//       "fname lname"
+//       "age dob"
+//       "email gender"
+//       "state hobbies";
+//   }
 
-  .fname-input {
-    grid-area: fname;
-  }
-  .lname-input {
-    grid-area: lname;
-  }
-  .num-input {
-    grid-area: age;
-  }
-  .email-input {
-    grid-area: email;
-  }
+//   .fname-input {
+//     grid-area: fname;
+//   }
+//   .lname-input {
+//     grid-area: lname;
+//   }
+//   .num-input {
+//     grid-area: age;
+//   }
+//   .email-input {
+//     grid-area: email;
+//   }
 
-  .dob {
-    grid-area: dob;
-  }
-  .radios {
-    grid-area: gender;
-  }
-  .state {
-    grid-area: state;
-  }
-  .hobies {
-    grid-area: hobies;
-  }
-  .file {
-    grid-area: file;
-  }
+//   .dob {
+//     grid-area: dob;
+//   }
+//   .radios {
+//     grid-area: gender;
+//   }
+//   .state {
+//     grid-area: state;
+//   }
+//   .hobies {
+//     grid-area: hobies;
+//   }
+//   .file {
+//     grid-area: file;
+//   }
 
-  .hobbies {
-    display: flex;
+//   .hobbies {
+//     display: flex;
+//   }
+// }
+#reg-form {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  .reg-a {
+    padding: 2rem;
+  }
+  .reg-b {
+    font-size: 1.1rem;
+    // justify-content: center;
+    align-items: center;
+    // max-width: 500px;
+    input,
+    textarea,
+    select {
+      transition: border 0.5s ease-in;
+      outline: 1px solid transparent;
+    }
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 1px solid $primary-color;
+      // border: $primary-color;
+      border: none;
+    }
+    .form-contain {
+      display: grid;
+      gap: 2rem;
+      justify-content: center;
+
+      .form-input {
+        padding: 0.6rem;
+      }
+    }
+
+    .hobbies {
+      display: flex;
+      .hob-check {
+        padding: 0 3rem;
+        align-items: flex-start;
+      }
+    }
+
+    .btn-form {
+      color: #fff;
+    }
+    .email-input {
+      width: 100%;
+    }
+    .num-input {
+      width: 82%;
+    }
+    .date-input {
+      width: 61%;
+    }
+    .select-input {
+      width: 57%;
+    }
   }
 }
 
