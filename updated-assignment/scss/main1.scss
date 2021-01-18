@@ -52,6 +52,7 @@
       grid-template-rows: repeat(7, 1fr);
       // justify-content: right;
       .header-content {
+        // position: fixed;
         // max-width: 50vw;
         // height: 50vh;
         padding: 1rem;
@@ -304,6 +305,12 @@
 // contact
 #contact {
   background: $medium-color;
+
+  input,
+  textarea,
+  select {
+    background-color: #fff;
+  }
   h2 {
     padding: 2rem 0;
   }

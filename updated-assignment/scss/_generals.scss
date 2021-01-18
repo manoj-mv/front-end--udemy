@@ -1,9 +1,13 @@
-General Styling body {
-  font-family: "Roboto", sans-serif;
+// General Styling
+
+body {
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   background: #fff;
 }
-
+h1 {
+  font-weight: bold;
+}
 a {
   text-decoration: none;
   color: $primary-font-color;

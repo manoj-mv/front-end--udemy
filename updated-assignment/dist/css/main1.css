@@ -57,7 +57,7 @@ select:focus {
   display: block;
   padding-bottom: 0.5rem;
   text-align: center;
-  font-weight: 100; }
+  font-weight: 600; }
 
 .btn-primary {
   display: inline-block;
@@ -83,10 +83,13 @@ select:focus {
   max-width: 50vw;
   margin: auto; }
 
-General Styling body {
-  font-family: "Roboto", sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   background: #fff; }
+
+h1 {
+  font-weight: bold; }
 
 a {
   text-decoration: none;
@@ -293,6 +296,10 @@ img {
 
 #contact {
   background: #f5f5f5; }
+  #contact input,
+  #contact textarea,
+  #contact select {
+    background-color: #fff; }
   #contact h2 {
     padding: 2rem 0; }
   #contact .content {
