@@ -33,7 +33,7 @@ function nameValidate(e) {
   if (!re.test(element.value)) {
     console.log('error');
     // show error
-    showError(element,fname_validate,'*Name must be between 2 to 10 charcters.');
+    showError(element,fname_validate,'*Name must be between 3 to 20 charcters.');
   }
   else{
     // hide error
