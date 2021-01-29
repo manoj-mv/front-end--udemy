@@ -48,15 +48,27 @@
               <!-- <i class="fas fa-user"></i> -->
               <input type="text" name="" id="" class="form-input lname-input" placeholder="Last Name">
               </div>
+              <div class="invalid-feedback" id="fname-validate">
+                <!-- *Name must be between 2 to 10 charcters. -->
+              </div>
             </div>
+            <div>
             <div class="age-field">
               <label for="age"><i class="fas fa-child"></i> Age : </label>
-              <input type="number" name="age" id="" class="form-input num-input" placeholder="Your Age">
+              <input type="text" name="age" id="" class="form-input num-input" placeholder="Your Age">
             </div>
-            <div class="dob">
-              <i class="fas fa-calendar-alt"></i>
-              <label for="dob">Date Of Birth : </label>
-              <input type="date" name="dob" id="" class="form-input date-input">
+            <div class="invalid-feedback" id="age-validate">
+              <!-- *Name must be between 2 to 10 charcters. -->
+            </div>
+            </div>
+            <div>
+              <div class="dob">
+                <i class="fas fa-calendar-alt"></i>
+                <label for="dob">Date Of Birth : </label>
+                <input type="date" name="dob" id="" class="form-input date-input">
+              </div>
+              <div class="invalid-feedback" id="dob-validate">
+              </div>
             </div>
             <div class="email-field">
               <i class="fas fa-envelope"></i>
@@ -159,6 +171,6 @@
       </div>
     </div>
   </footer>
-  
+<script src="js/validate.js"></script>
 </body>
 </html>

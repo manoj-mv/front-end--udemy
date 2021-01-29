@@ -419,6 +419,14 @@ textarea {
       width: 64%; }
     #reg-form .reg-b .select-input {
       width: 60%; }
+    #reg-form .reg-b .name-flex {
+      display: flex;
+      justify-content: space-between; }
+  #reg-form .invalid-feedback {
+    color: red;
+    font-size: 0.9rem; }
+  #reg-form .error-outline {
+    outline: 1px solid #d16f6f !important; }
 
 @media (max-width: 540px) {
   #main-nav {

@@ -545,6 +545,19 @@ textarea {
     .select-input {
       width: 60%;
     }
+    .name-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .invalid-feedback {
+    color: red;
+    font-size: 0.9rem;
+  }
+
+  .error-outline {
+    outline: 1px solid rgb(209, 111, 111) !important;
   }
 }
 
