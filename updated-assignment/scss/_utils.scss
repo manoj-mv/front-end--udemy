@@ -86,6 +86,22 @@
   &-primary:hover {
     opacity: 0.7;
   }
+  &-danger {
+    @extend %btn-shared;
+    background-color: red;
+    transition: opacity 0.7s ease-in-out;
+  }
+  &-danger:hover {
+    opacity: 0.7;
+  }
+  &-warning {
+    @extend %btn-shared;
+    background-color: yellow;
+    transition: opacity 0.7s ease-in-out;
+  }
+  &-warning:hover {
+    opacity: 0.7;
+  }
 }
 
 .capitalize {

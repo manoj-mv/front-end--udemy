@@ -1,5 +1,7 @@
 console.log('begin \'validate.js\' script...');
 
+// variables
+const numberOfFormInputs = 9;
 // form elmnts
 const fname = document.querySelector('.fname-input');
 const lname = document.querySelector('.lname-input');
@@ -52,7 +54,7 @@ file.addEventListener('change', fileValidate);
 state.addEventListener('mouseup', stateValidate);
 
 // form submit validate
-form.addEventListener('submit',isFilledRequiredInputs);
+form.addEventListener('submit',submitForm);
 
 function nameValidate(e) {
   // get value fro event origin
@@ -64,7 +66,7 @@ function nameValidate(e) {
 
   // validate using RE
   if (!re.test(element.value)) {
-    console.log('error');
+    // console.log('error');
     // show error
     showError(element, fname_validate, '*Name must be between 3 to 20 charcters.');
   }
@@ -79,7 +81,7 @@ function nameValidate(e) {
 function ageValidate(e) {
   // event source
   const element = e.target;
-  console.log(Number(element.value));
+  // console.log(Number(element.value));
   if (Number(element.value)) {
     if (element.value === 0 || element.value > 100) {
       showError(element, age_validate, '*Age must be between 1 - 100.');
@@ -100,11 +102,11 @@ function ageValidate(e) {
 function dobValidate(e) {
   element = e.target;
   if (!element.value) {
-    console.log('selected')
+    // console.log('selected')
     showError(element, dob_validate, '*Required.');
   }
   else {
-    console.log('Not selected')
+    // console.log('Not selected')
     hideError(element, dob_validate);
   }
 }
@@ -128,8 +130,8 @@ function fileValidate(e){
   const file = element.value;
   // find file extention
   const fileExtention  = file.split('.').pop();
-  console.log(fileExtention);
-  console.log(element.files[0].size/1024);
+  // console.log(fileExtention);
+  // console.log(element.files[0].size/1024);
   if(fileExtention !== 'pdf'){
     showError(element, file_validate, '*File should be pdf.');
     // doesn't need to show outline in file type
@@ -150,7 +152,7 @@ function fileValidate(e){
 
 // state inp validate
 function stateValidate(e){
-  console.log(e.target.value);
+  // console.log(e.target.value);
   element = e.target;
   if(!element.value){
     showError(element, state_validate, '*Required.');
@@ -161,50 +163,99 @@ function stateValidate(e){
   }
 }
 
+// submit & show data
+function submitForm(e){
+  const checkArr = isFilledRequiredInputs(e);
+  console.log('CheckArr',checkArr);
+  // flags check
+  let isSubmitConfirmCount = 0;
+  checkArr.forEach(function(val) {
+    // console.log('flag',val);
+    if(val === 1){
+      isSubmitConfirmCount += 1;
+    }
+  });
+  console.log('sum',isSubmitConfirmCount);
+  if (isSubmitConfirmCount === numberOfFormInputs){
+    console.log('show modal');
+    showModal();
+    document.querySelector('#modal-data').style.display = 'block';
+  }
+}
+
 // check whether all required fields are filled on form submit
 function isFilledRequiredInputs(e){
+  // flag array for decide modal pop up
+  const flagArr =[];
   e.preventDefault();
   // console.log(fname.value);
   if(fname.value === ""){
-    // console.log(suc);
     showError(fname, fname_validate, '*Required.');
+    flagArr.push(0);
+  }
+  else{
+    flagArr.push(1);
   }
   if(lname.value === ""){
     // console.log(suc);
     showError(lname, fname_validate, '*Required.');
+    flagArr.push(0);
+  }
+  else{
+    flagArr.push(1);
   }
   if(age.value === ""){
     // console.log(suc);
     showError(age, age_validate, '*Required.');
+    flagArr.push(0);
+  }
+  else{
+    flagArr.push(1);
   }
   if(dob.value === ""){
     // console.log(suc);
     showError(dob,dob_validate, '*Required.');
+    flagArr.push(0);
+  }
+  else{
+    flagArr.push(1);
   }
   if(email.value === ""){
     // console.log(suc);
     showError(email,email_validate, '*Required.');
+    flagArr.push(0);
+  }
+  else{
+    flagArr.push(1);
   }
   if(state.value === ""){
     // console.log(suc);
     showError(state,state_validate, '*Required.');
+    flagArr.push(0);
+  }
+  else{
+    flagArr.push(1);
   }
   
   if(document.querySelector('input[type="radio"]:checked') === null){
     // console.log(document.querySelector('input[type="radio"]:checked'));
     showError(gender,gender_validate, '*Required.');
+    flagArr.push(0);
   }
   else{
     hideError(gender,gender_validate);
+    flagArr.push(1);
   }
   // console.log(document.querySelector('input[type="checkbox"]:checked'));
   //check box error block
   if(document.querySelector('input[type="checkbox"]:checked') === null){
     // console.log(document.querySelector('input[type="checkbox"]:checked'));
     showError(hobby,hobby_validate, '*Required.');
+    flagArr.push(0);
   }
   else{
     hideError(hobby,hobby_validate);
+    flagArr.push(1);
   }
 
   // file
@@ -212,14 +263,44 @@ function isFilledRequiredInputs(e){
     // console.log(file.files[0]);
     showError(file,file_validate, '*Required.');
     file.classList.remove('error-outline');
+    flagArr.push(0);
   }
   else{
-    
+    flagArr.push(1);
   }
-  
+  return flagArr;
 }
+console.log(document.querySelector('.file-d'));
+console.log(file.files);
+function showModal(){
+  document.querySelector('.fname').innerHTML = fname.value;
+  document.querySelector('.lname').innerHTML = lname.value;
+  
+  document.querySelector('.age').innerHTML = age.value;
+  document.querySelector('.dob-d').innerHTML = dob.value;
+  document.querySelector('.email-d').innerHTML = email.value;
+  document.querySelector('.gender-d').innerHTML =document.querySelector('input[type="radio"]:checked').value;
+  document.querySelector('.state-d').innerHTML = state.options[state.selectedIndex].value;
 
-
+  // checkbox value string generate
+  const checkBoxes_checked =document.querySelectorAll('input[type="checkbox"]:checked');
+  console.log(checkBoxes_checked);
+  let hobby_list ='';
+  checkBoxes_checked.forEach((checkVal,index) =>{
+    // console.log(checkVal.name);
+    if(index < checkBoxes_checked.length-1){
+      hobby_list += `${checkVal.name},`;
+    }
+    else{
+      hobby_list +=checkVal.name;
+    }
+  });
+  console.log(hobby_list);
+  // display hobbies
+  document.querySelector('.hobbies-d').innerHTML = hobby_list;
+  console.log(file.files[0]);
+  document.querySelector('.file-d').innerHTML = file.files[0].name;
+}
 
 // show error alert
 function showError(element, err_block, msg) {
