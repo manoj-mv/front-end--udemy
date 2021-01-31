@@ -39,7 +39,7 @@
         <div></div>
       </div>
       <div class="reg-b">
-        <form action="">
+        <form id="form" action="">
           <div class="form-contain">
             <div class="name-fields">
               <label for="name"><i class="fas fa-user"></i> Name : </label>
@@ -67,35 +67,44 @@
                 <label for="dob">Date Of Birth : </label>
                 <input type="date" name="dob" id="" class="form-input date-input">
               </div>
-              <div class="invalid-feedback" id="dob-validate">
+              <div class="invalid-feedback" id="dob-validate"></div>
+            </div>
+            <div>
+              <div class="email-field">
+                <i class="fas fa-envelope"></i>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="" class="form-input email-input" placeholder="Your Mail">
               </div>
+              <div class="invalid-feedback" id="email-validate"></div>
             </div>
-            <div class="email-field">
-              <i class="fas fa-envelope"></i>
-              <label for="email">Email</label>
-              <input type="email" name="email" id="" class="form-input email-input" placeholder="Your Mail">
+            <div>
+              <div class="gender-field">
+                <i class="fas fa-venus-mars"></i>
+                <label for="gender">Gender : </label>
+                <input type="radio" id="male" name="gender" class="form-input gender-input" value="male" >
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" class="form-input gender-input" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" class="form-input gender-input" value="other">
+                <label for="other">Other</label> 
+              </div>
+              <div class="invalid-feedback" id="gender-validate"></div>
             </div>
-              
-            <div class="gender-field">
-              <i class="fas fa-venus-mars"></i>
-              <label for="gender">Gender : </label>
-              <input type="radio" id="male" name="gender" class="form-input" value="male" >
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female">
-              <label for="female">Female</label>
-              <input type="radio" id="other" name="gender" value="other">
-              <label for="other">Other</label> 
+            <div>
+              <div class="state-field">
+                <i class="fas fa-street-view"></i>
+                <label for="cars">Choose a State : </label>
+                <select name="state" id="state" class="form-input select-input">
+                  <option value="">--select--</option>
+                  <option value="kerala">kerala</option>
+                  <option value="tamil nadu">tamil nadu</option>
+                  <option value="karnataka">karnataka</option>
+                  <option value="goa">goa</option>
+                </select> 
+              </div>
+              <div class="invalid-feedback" id="state-validate"></div>
             </div>
-            <div class="state-field">
-              <i class="fas fa-street-view"></i>
-              <label for="cars">Choose a State : </label>
-              <select name="state" id="state" class="form-input select-input">
-                <option value="kerala">kerala</option>
-                <option value="tamil nadu">tamil nadu</option>
-                <option value="karnataka">karnataka</option>
-                <option value="goa">goa</option>
-              </select> 
-            </div>
+            <div>
               <div class="hobbies">
                 <div class="hob-label">
                   <i class="fab fa-gratipay"></i>
@@ -106,20 +115,22 @@
                   <label for="coding">  Coding</label><br>
                   <input type="checkbox" id="reading" name="reading" value="read">
                   <label for="reading">  Reading</label><br>
-                  <input type="checkbox" id="movie" name="movie" value="Boat">
+                  <input type="checkbox" id="movie" name="movie" value="movie">
                   <label for="movie"> Movie</label><br> 
                   <a href="#"><i class="fas fa-plus-circle"></i> Add New</a>
                 </div>
-                
+                <div class="invalid-feedback flex-y-center" id="hobby-validate"></div>
               </div>
+            </div>
+            <div>
               <div class="file">
                 <i class="fas fa-file-alt"></i>
                 <label for="resume">File </label>
-                <input type="file" name="resume" id="" class="form-input email-input" placeholder="Your Email">
+                <input type="file" name="resume" id="" class="form-input file-input" >
               </div>
-              <a href="" class="btn-primary text-center btn-form">Submit</a>
-          </div>
-          
+              <div class="invalid-feedback" id="file-validate"></div>
+            </div> 
+            <input type="submit" id="submit-val" class="btn-primary text-center btn-form" value="Submit">
         </form>
       </div>
     </div>

@@ -410,7 +410,9 @@ textarea {
     #reg-form .reg-b input[type="file"] {
       outline: none; }
     #reg-form .reg-b .btn-form {
-      color: #fff; }
+      color: #fff;
+      outline: none;
+      font-size: 1.3rem; }
     #reg-form .reg-b .email-input {
       width: 100%; }
     #reg-form .reg-b .num-input {
@@ -427,6 +429,9 @@ textarea {
     font-size: 0.9rem; }
   #reg-form .error-outline {
     outline: 1px solid #d16f6f !important; }
+
+.flex-y-center {
+  margin: auto; }
 
 @media (max-width: 540px) {
   #main-nav {

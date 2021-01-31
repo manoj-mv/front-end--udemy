@@ -531,6 +531,8 @@ textarea {
 
     .btn-form {
       color: #fff;
+      outline: none;
+      font-size: 1.3rem;
     }
     .email-input {
       width: 100%;
@@ -560,6 +562,8 @@ textarea {
     outline: 1px solid rgb(209, 111, 111) !important;
   }
 }
-
+.flex-y-center {
+  margin: auto;
+}
 // mobile
 @import "mobile";
