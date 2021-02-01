@@ -9,13 +9,14 @@ const age = document.querySelector('.num-input');
 const dob = document.querySelector('.date-input');
 const email = document.querySelector('.email-input');
 const gender = document.querySelector('.gender-input');
+const gender_radios =document.querySelectorAll('input[name="gender"]');
 const state = document.querySelector('.select-input');
 const hobby = document.querySelector('input[type="checkbox"]');
 const file = document.querySelector('.file-input');
 const submitBtn = document.querySelector('#submit-val');
 
-const form = document.getElementById('form')
-console.log(form);
+const form = document.getElementById('form');
+// console.log(hobby_items);
 
 // error divs
 const fname_validate = document.querySelector('#fname-validate');
@@ -26,7 +27,7 @@ const gender_validate = document.querySelector('#gender-validate');
 const state_validate = document.querySelector('#state-validate');
 const hobby_validate = document.querySelector('#hobby-validate');
 const file_validate = document.querySelector('#file-validate');
-// console.log(state_validate);
+// console.log('checkbox',document.querySelectorAll('input[type="checkbox"]'));
 
 
 // fname validate event 
@@ -47,12 +48,20 @@ email.addEventListener('blur', emailValidate);
 // gender validate event 
 // gender.addEventListener('blur', genderValidate);
 
+// gender validate event 
+gender_radios[0].addEventListener('change', genderValidate);
+gender_radios[1].addEventListener('change', genderValidate);
+gender_radios[2].addEventListener('change', genderValidate);
+console.log('gender',document.querySelectorAll('input[name="gender"]'));
+
 // file input validate event 
 file.addEventListener('change', fileValidate);
 
 // state input validate event 
 state.addEventListener('mouseup', stateValidate);
 
+// hobby
+document.querySelector('.hob-check').addEventListener('click',hobValidate);
 // form submit validate
 form.addEventListener('submit',submitForm);
 
@@ -122,7 +131,22 @@ function emailValidate(e){
     hideError(element, email_validate);
   }
 }
+// gender validate
+function genderValidate(e){
+  // console.log('triggered',e.target.checked);
+  hideError(e.target,gender_validate);
+}
 
+// hobby
+function hobValidate(e){
+  console.log('hob calle');
+  const hobby_items = document.querySelectorAll('input[type="checkbox"]:checked');
+  console.log(hobby_items);
+  if(hobby_items.length !== 0){
+    console.log('ok');
+    hideError(hobby,hobby_validate);
+  }
+}
 // file inp validation
 function fileValidate(e){
   const element = e.target;
@@ -189,6 +213,7 @@ function isFilledRequiredInputs(e){
   const flagArr =[];
   e.preventDefault();
   // console.log(fname.value);
+  // console.log('checkbox',document.querySelectorAll('input[type="checkbox"]:checked'));
   if(fname.value === ""){
     showError(fname, fname_validate, '*Required.');
     flagArr.push(0);
@@ -319,3 +344,4 @@ const hideError = (element, err_block) => {
   err_block.innerHTML = '';
   element.classList.remove('error-outline');
 }
+
